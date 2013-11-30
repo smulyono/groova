@@ -1,0 +1,35 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<display-name>Groova Jersey 2</display-name>
+	<servlet>
+	   <servlet-name>jerseyServlet</servlet-name>
+	   <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+	   <init-param>
+	       <param-name>javax.ws.rs.Application</param-name>
+	       <param-value>me.smulyono.learn.groova.jersey2.application.JerseyApplication</param-value>
+	   </init-param>
+	   <load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+	   <servlet-name>jerseyServlet</servlet-name>
+	   <url-pattern>/jersey2/*</url-pattern>
+	</servlet-mapping>
+	
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<context-param>
+		<param-name>contextClass</param-name>
+		<param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>me.smulyono.learn.groova.jersey2.config.Configuration</param-value>
+	</context-param>
+
+</web-app>

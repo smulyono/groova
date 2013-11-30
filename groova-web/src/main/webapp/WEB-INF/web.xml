@@ -29,7 +29,7 @@
 	<servlet>
 		<servlet-name>winkServlet</servlet-name>
 		<servlet-class>org.apache.wink.server.internal.servlet.RestServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
+		<load-on-startup>2</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>winkServlet</servlet-name>
@@ -44,6 +44,7 @@
 			<param-name>com.sun.jersey.config.property.packages</param-name>
 			<param-value>
 		      me.smulyono.learn.groova.groovaWeb.controller.jaxrs.Endpoint
+              me.smulyono.learn.groova.groovaWeb.controller.jaxrs.EndpointGroovy
 		  </param-value>
 		</init-param>
 		<init-param>
@@ -51,7 +52,7 @@
 			<param-value>true</param-value>
 		</init-param>
 		
-		<load-on-startup>2</load-on-startup>
+		<load-on-startup>3</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>jerseyServlet</servlet-name>
