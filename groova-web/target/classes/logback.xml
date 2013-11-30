@@ -19,7 +19,7 @@
     </appender>
 
     <appender name="file" class="ch.qos.logback.core.FileAppender">
-        <file>groovaApp.log</file>
+        <file>groovaWeb.log</file>
         <encoder>
             <pattern>
                 ${defaultFormat}

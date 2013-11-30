@@ -1,4 +1,4 @@
-package me.smulyono.learn.groova.groovaWeb.controller.wink
+package me.smulyono.learn.groova.groovaWeb.controller.jaxrs
 
 
 import javax.ws.rs.GET
@@ -15,9 +15,9 @@ import org.springframework.stereotype.Component
 
 @Component
 @Path("/gjson")
-class WinkEndpointGroovy {
+class EndpointGroovy {
 	
-	private Logger logger = LoggerFactory.getLogger(WinkEndpointGroovy.class);
+	private Logger logger = LoggerFactory.getLogger(EndpointGroovy.class);
 	
 	@Path("/{name}")
 	@GET

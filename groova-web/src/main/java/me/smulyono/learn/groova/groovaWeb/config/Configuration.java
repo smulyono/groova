@@ -18,16 +18,21 @@ import org.springframework.context.annotation.ImportResource;
 public class Configuration {
 	@Autowired
 	private ApplicationContext context;
-
+	
+	/**
+	 * Configuration for Wink Implementation JAX-RS
+	 * @return
+	 */
 	@Bean
 	public Registrar getRegistrar() {
 		Registrar newBean = new Registrar();
 		Set<Object> winkResources = new HashSet<Object>(2);
-		winkResources.add(context.getBean("winkEndpoint"));
-		winkResources.add(context.getBean("winkEndpointGroovy"));
+		winkResources.add(context.getBean("endpoint"));
+		winkResources.add(context.getBean("endpointGroovy"));
 
 		newBean.setInstances(winkResources);
 
 		return newBean;
 	}
+	
 }

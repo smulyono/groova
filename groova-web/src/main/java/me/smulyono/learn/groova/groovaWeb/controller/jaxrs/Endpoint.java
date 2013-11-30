@@ -1,4 +1,4 @@
-package me.smulyono.learn.groova.groovaWeb.controller.wink;
+package me.smulyono.learn.groova.groovaWeb.controller.jaxrs;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Path("/")
-public class WinkEndpoint {
+public class Endpoint {
 
 	@Path("/json/{name}")
 	@GET
